@@ -1,6 +1,6 @@
 'use strict'
 const STORAGE_KEY = 'usersData_array'
-gUsers = loadFromStorage(STORAGE_KEY) || []
+const gUsers = loadFromStorage(STORAGE_KEY) || []
 
 // Private
 

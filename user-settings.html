@@ -4,11 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/user.style.css">
+    <title>place keeper</title>
 </head>
 
 <body>
     <main>
+        <header>
+            <a href="./index.html">Home</a>
+            <a href="./user-settings.html">Settings</a>
+            <a href="./map.html">Map</a>
+        </header>
+
         <form class="user-form" onsubmit="onSubmit(event)">
             <label for="name">Name:</label>
             <input type="text" id="name" required name="name" placeholder="Enter your name" />
@@ -25,13 +33,23 @@
 
             <label for="color">Set background color: </label>
             <input type="color" id="color" name="color" value="#ff0000" />
-            
+
             <button>Submit</button>
         </form>
     </main>
 
-    <script src="services/user.servise.js"></script>
-    <script src="controller.js"></script>
+    <div class="gradient-background">
+        <div class="gradient-sphere sphere-1"></div>
+        <div class="gradient-sphere sphere-2"></div>
+        <div class="gradient-sphere sphere-3"></div>
+        <div class="particles-container"></div>
+    </div>
+
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/user.service.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/particle.js"></script>
 </body>
 
 </html>
