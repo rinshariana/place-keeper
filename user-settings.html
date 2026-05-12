@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <main>
+        <form class="user-form" onsubmit="onSubmit(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required name="name" placeholder="Enter your name" />
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" />
+
+            <label for="age">Age: <span id="sAge">26</span></label>
+            <input type="range" id="age" name="age" step="1" min="1" max="120" value="26"
+                onchange="showAge(this.value)" />
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" />
+
+            <label for="color">Set background color: </label>
+            <input type="color" id="color" name="color" value="#ff0000" />
+            
+            <button>Submit</button>
+        </form>
+    </main>
+
+    <script src="services/user.servise.js"></script>
+    <script src="controller.js"></script>
 </body>
+
 </html>
