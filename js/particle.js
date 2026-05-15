@@ -4,7 +4,7 @@
 const gParticleCount = 80;
 
 // Create particles
-function createParticles() {
+function renderParticles() {
     const elParticlesContainer = document.querySelector('.particles-container');
     const strHtml = []
     for (let i = 0; i < gParticleCount; i++) {

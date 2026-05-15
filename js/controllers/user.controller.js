@@ -1,4 +1,7 @@
 'use strict'
+function onInit() {
+    renderParticles()
+}
 
 function onSubmit(ev) {
     ev.preventDefault()

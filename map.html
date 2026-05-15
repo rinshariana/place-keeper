@@ -1,11 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- <style>
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        .map {
+            height: 50%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style> -->
+    <link rel="stylesheet" href="css/style.css"></link>
+    <link rel="stylesheet" href="css/map.style.css"></link>
 </head>
-<body>
-    
+
+<body onload="onInit()">
+
+    <div class="gradient-background">
+        <div class="gradient-sphere sphere-1"></div>
+        <div class="gradient-sphere sphere-2"></div>
+        <div class="gradient-sphere sphere-3"></div>
+        <div class="particles-container"></div>
+    </div>
+
+    <div class="map"></div>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANEykIaeqi3B69VbF2rY8HQ3G3cq90kLQ&callback=initMap&loading=async"></script>
+    <script src="js/controllers/map.controller.js"></script>
+    <script src="js/particle.js"></script>
 </body>
+
 </html>
