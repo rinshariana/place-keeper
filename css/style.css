@@ -1,16 +1,31 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
+* {
     box-sizing: border-box;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
+    margin: 0;
     background-color: #050505;
     color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    display: flex;
+    position: sticky;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: rgba(245, 245, 245, 0.305);
+    z-index: 1;
 }
 
 a {
     color: whitesmoke;
+    text-decoration: none;
 }
 
 .gradient-background {

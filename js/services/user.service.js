@@ -1,6 +1,10 @@
 'use strict'
-const STORAGE_KEY = 'usersData_array'
-const gUsers = loadFromStorage(STORAGE_KEY) || []
+const STORAGE_KEY = 'userData'
+let gUser = loadFromStorage(STORAGE_KEY) || {name: 'Ariana'}
+
+function getUser() {
+    return gUser
+}
 
 // Private
 
@@ -9,10 +13,10 @@ function _addUser(userData) {
         id: makeId(),
         ...userData
     }
-    gUsers.push(user)
-    _saveUsers()
+    gUser = user
+    _saveUser()
 }
 
-function _saveUsers() {
-    saveToStorage(STORAGE_KEY, gUsers)
+function _saveUser() {
+    saveToStorage(STORAGE_KEY, gUser)
 }

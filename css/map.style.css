@@ -1,4 +1,13 @@
 .map {
+    display: flex;
     height: 50%;
     width: 50%;
+}
+
+main {
+    display: flex;
+    
+    flex: 1;
+    gap: 4rem;
+    padding: 2rem;
 }

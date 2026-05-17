@@ -1,0 +1,13 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex: 1;
+    gap: 4rem;
+    padding: 2rem;
+}
+
+.hero {
+    font-size: 3rem;
+}
